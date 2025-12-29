@@ -29,7 +29,7 @@ It's fast, configurable, and CI/CD ready.
 Requirements: [Zig 0.13+](https://ziglang.org/download/)
 
 ```bash
-git clone https://github.com/your-org/vibecheck.git
+git clone https://github.com/copyleftdev/vibecheck.git
 cd vibecheck
 zig build -Doptimize=ReleaseSmall
 ```
