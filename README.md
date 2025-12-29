@@ -21,6 +21,7 @@ It's fast, configurable, and CI/CD ready.
   - Non-zero exit codes for build failures.
   - JSON output for machine parsing.
   - GitHub Actions Annotations support (`--github`).
+- **🧠 AI Ready**: Built-in Model Context Protocol (MCP) Server.
 
 ## Installation
 
@@ -51,6 +52,12 @@ vibecheck . --json
 **GitHub Actions Mode** (PR Annotations)
 ```bash
 vibecheck . --github
+```
+
+**AI Agent Mode** (Model Context Protocol) 🤖
+Turn VibeCheck into a tool for Claude/Gemini.
+```bash
+vibecheck --mcp
 ```
 
 **List Active Patterns**
