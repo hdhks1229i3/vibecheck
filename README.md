@@ -2,7 +2,7 @@
 
 ![VibeCheck Logo](./media/logo.png "VibeCheck Logo")
 
-![Vibe](https://img.shields.io/badge/Vibe-Immaculate-ff00d4?style=for-the-badge) ![Zig](https://img.shields.io/badge/Made%20With-Zig-orange?style=for-the-badge&logo=zig) ![VibeCheck](https://img.shields.io/badge/Vibes-Checked-blue?style=for-the-badge) ![Size](https://img.shields.io/badge/Size-105KB-brightgreen?style=for-the-badge)
+![Vibe](https://img.shields.io/badge/Vibe-Immaculate-ff00d4?style=for-the-badge) ![Zig](https://img.shields.io/badge/Made%20With-Zig-orange?style=for-the-badge&logo=zig) ![VibeCheck](https://img.shields.io/badge/Vibes-Checked-blue?style=for-the-badge) ![Size](https://img.shields.io/badge/Size-149KB-brightgreen?style=for-the-badge)
 
 > "Yes, I even vibe checked vibe check 🤯"
 
@@ -13,7 +13,7 @@ It's fast, configurable, and CI/CD ready.
 ## Features
 
 - **⚡ Blazing Fast**: Recursively scans thousands of files in milliseconds.
-- **🪶 Featherweight**: ~105KB static binary. Zero dependencies. Runs on a potato 🥔 🎤
+- **🪶 Featherweight**: ~149KB static binary. Zero dependencies. Runs on a potato 🥔 🎤
 - **📦 Portable**: Single executable. Linux, Mac, Windows. No `node_modules` in sight.
 - **🛡️ Battle Tested**: Validated against a 50,000-file "Google-scale" monorepo.
 - **🧩 Modular**: Load custom pattern packs via JSON plugin system.
