@@ -1,6 +1,6 @@
 {
   "name": "Crucial Vibes",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "patterns": [
     {
       "id": "todo",
@@ -64,6 +64,41 @@
       "severity": "info",
       "match_type": "keyword",
       "query": "console.log"
+    },
+    {
+      "id": "hack",
+      "name": "Hack Marker",
+      "severity": "warn",
+      "match_type": "keyword",
+      "query": "HACK"
+    },
+    {
+      "id": "review",
+      "name": "Review Marker",
+      "severity": "info",
+      "match_type": "keyword",
+      "query": "REVIEW"
+    },
+    {
+      "id": "bug",
+      "name": "Bug Marker",
+      "severity": "warn",
+      "match_type": "keyword",
+      "query": "BUG"
+    },
+    {
+      "id": "insecure-chmod",
+      "name": "Insecure Permission (777)",
+      "severity": "error",
+      "match_type": "keyword",
+      "query": "chmod 777"
+    },
+    {
+      "id": "generic-secret",
+      "name": "Possible Secret",
+      "severity": "error",
+      "match_type": "keyword",
+      "query": "password ="
     }
   ]
 }

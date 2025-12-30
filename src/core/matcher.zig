@@ -45,7 +45,7 @@ pub const Matcher = struct {
                 }
 
                 if (pattern.match_type == .keyword) {
-                    if (std.mem.indexOf(u8, line, pattern.query)) |col| {
+                    if (std.ascii.indexOfIgnoreCase(line, pattern.query)) |col| {
                         // Found a match!
                         try findings.append(finding.Finding{
                             .pattern_id = pattern.id,

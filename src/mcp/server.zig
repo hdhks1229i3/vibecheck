@@ -62,7 +62,7 @@ pub const McpServer = struct {
             .capabilities = .{ .tools = .{} },
             .serverInfo = .{
                 .name = "vibecheck-mcp",
-                .version = "1.0.0",
+                .version = "1.1.0",
             },
         });
     }

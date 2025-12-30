@@ -11,24 +11,25 @@ pub const ConsoleReporter = struct {
             return;
         }
 
-        // Sort findings: Severity (desc), then Pattern ID
+        // Sort findings: Path (asc), then Line (asc)
         std.sort.block(finding.Finding, findings, {}, lessThan);
 
         try stdout.print("\nfound {} unfinished vibes:\n", .{findings.len});
 
-        var current_pattern_id: ?[]const u8 = null;
+        var current_path: ?[]const u8 = null;
 
         for (findings) |f| {
-            const is_new_group = if (current_pattern_id) |id| !std.mem.eql(u8, id, f.pattern_id) else true;
+            const is_new_file = if (current_path) |path| !std.mem.eql(u8, path, f.location.path) else true;
 
-            if (is_new_group) {
-                try stdout.print("\n", .{}); // Spacer
-                try printSeverityBadge(stdout, f.severity);
-                try stdout.print(" {s}\n", .{f.message});
-                current_pattern_id = f.pattern_id;
+            if (is_new_file) {
+                try stdout.print("\n{s}\n", .{f.location.path});
+                current_path = f.location.path;
             }
 
-            try stdout.print("  {s}:{}:{}\n",.{f.location.path, f.location.line, f.location.column orelse 0});
+            // Indent finding under file
+            try printSeverityBadge(stdout, f.severity);
+            try stdout.print(" {s}: line {}\n", .{f.message, f.location.line});
+            
             if (f.location.snippet) |s| {
                  try stdout.print("    | {s}\n", .{s});
             }
@@ -37,26 +38,23 @@ pub const ConsoleReporter = struct {
     }
 
     fn printSeverityBadge(writer: anytype, severity: finding.Severity) !void {
-        // Simple text badges for now. Colors can be added with ANSI codes later.
         switch (severity) {
-            .critical => try writer.print("[ERROR]", .{}),
-            .warn =>  try writer.print("[WARN] ", .{}), // Padding for alignment
-            .info =>  try writer.print("[INFO] ", .{}),
+            .critical => try writer.print("  [ERROR]", .{}),
+            .warn =>  try writer.print("  [WARN] ", .{}), 
+            .info =>  try writer.print("  [INFO] ", .{}),
         }
     }
 
     fn lessThan(context: void, lhs: finding.Finding, rhs: finding.Finding) bool {
         _ = context;
-        // Sort by Severity Descending (Error > Warn > Info)
-        const lhs_sev = @intFromEnum(lhs.severity);
-        const rhs_sev = @intFromEnum(rhs.severity);
-        
-        if (lhs_sev != rhs_sev) {
-            return lhs_sev > rhs_sev;
+        // Sort by Path Ascending
+        const path_cmp = std.mem.order(u8, lhs.location.path, rhs.location.path);
+        if (path_cmp != .eq) {
+            return path_cmp == .lt;
         }
         
-        // Then by Pattern ID
-        return std.mem.lessThan(u8, lhs.pattern_id, rhs.pattern_id);
+        // Then by Line Ascending
+        return lhs.location.line < rhs.location.line;
     }
 };
 
